@@ -6,6 +6,12 @@ import java.util.Random;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * Marko Stojicic RN 129/2023
+ *
+ *
+ * */
 public class Student implements Runnable {
     private final int studentId;
     long studentArrivalTimeMill; // u milisekundama je izrazen

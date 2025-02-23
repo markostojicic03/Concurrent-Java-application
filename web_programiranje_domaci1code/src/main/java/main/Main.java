@@ -4,14 +4,18 @@ import checkhomework.Student;
 
 import java.util.Random;
 import java.util.concurrent.*;
-
+/**
+ * Marko Stojicic RN 129/2023
+ *
+ *
+ * */
 public class Main {
 
     public static void main(String[] args) {
         int n = 10;
         ExecutorService executorServiceStudent = Executors.newCachedThreadPool();
         ExecutorService executorServiceProfessor = Executors.newFixedThreadPool(2);
-        ExecutorService executorServiceAssistant = Executors.newSingleThreadExecutor();
+        ExecutorService executorServiceAssistant = Executors.newFixedThreadPool(1);
         int totalStudentsForProfessor = 2;
         CyclicBarrier barrier = new CyclicBarrier(totalStudentsForProfessor);
         Semaphore semaphore = new Semaphore(totalStudentsForProfessor);
